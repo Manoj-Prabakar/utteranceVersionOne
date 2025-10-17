@@ -1,0 +1,33 @@
+# Copilot Prompt:
+# Write a Python script that uses the dfcx-scrapi library to automatically test Dialogflow CX utterances.
+#
+# Requirements:
+# 1. Import and use the following:
+#       from dfcx_scrapi.core.conversation import DialogflowConversation
+#       from dfcx_scrapi.analysis import run_intent_detection
+#
+# 2. Read a CSV file named "utterances.csv" with two columns:
+#       utterance, expected_intent
+#
+# 3. Ask the user to input the Dialogflow agent_id (via input()).
+#    Example: projects/<PROJECT_ID>/locations/<LOCATION>/agents/<AGENT_ID>
+#
+# 4. Create a DialogflowConversation object using the provided agent_id.
+#
+# 5. Pass that conversation object and the DataFrame into run_intent_detection()
+#    to test all utterances automatically.
+#
+# 6. The results should include columns like:
+#       utterance, expected_intent, detected_intent, confidence, match
+#    Compare expected_intent vs detected_intent and compute accuracy.
+#
+# 7. Print the accuracy percentage and save the output to a file called
+#       intent_test_results.csv
+#
+# 8. Keep the code short (under ~50 lines) and simple to understand.
+#
+# Example terminal output:
+# Enter your Dialogflow agent_id: projects/demo/locations/us-central1/agents/abcd1234
+# Running utterance tests...
+# ✅ Test completed. Accuracy: 94.7%
+# Results saved to intent_test_results.csv
